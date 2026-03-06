@@ -1,0 +1,14 @@
+<Quantitative Feature 1>
+code_size_median: 303.0
+code_size_mode: 81.0
+code_size_mean: 471.7491062039958
+
+<Quantitative Feature 2>
+cpu_time_median: 72.0
+cpu_time_mode: 17.0
+cpu_time_mean: 359.27045215562566
+
+<Quantitative Feature 3>
+memory_val_median: 9148.0
+memory_val_mode: 2940.0
+memory_val_mean: 46683.488538380654

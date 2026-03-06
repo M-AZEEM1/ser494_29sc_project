@@ -7,7 +7,7 @@ download and the one in your repo must match.)
 
 
 #### SER494: Exploratory Data Munging and Visualization
-#### Project: LLM-Synthesized Code Detection through Digital Forensics
+#### Project: Detection of LLM-Synthesized Code 
 #### Author: ???
 #### Date: 3.4.2026
 
@@ -105,7 +105,7 @@ took 1280 seconds to run on the CPU and 182272 KB of memory. Lastly, the code it
 algorithm.
 
 Now with regard to sanity checking this data, the only value that I initially thought might not make sense was the memory value. 
-Here in the IBM Codenet repo README (https://github.com/IBM/Project_CodeNet/tree/main?tab=readme-ov-file#example-of-getting-the-metadata-for-a-particular-source-file)
+Here in the IBM CodeNet repo README (https://github.com/IBM/Project_CodeNet/tree/main?tab=readme-ov-file#example-of-getting-the-metadata-for-a-particular-source-file)
 it states that the memory used field in the metadata is measured in kilobytes. However, 182272 KB = 180 MB and this is significantly more memory
 than several other submissions in the dataset. So comparing to a typical code
 submission this may seem wildly out of range, but given this is a recursive DFS algorithm, after further research I realized that this
@@ -113,7 +113,9 @@ probably makes sense given potential complexity of the code sample. Therefore, I
 for sure from this data row.
 
 
-
+## 'Human Selected Dataset' Features for Computing Statistics ##
+Qualitative: 'code', 'status'
+Quantitative: 'code_size', 'memory', 'cpu_time'
 
 
 ## Background Domain Knowledge
