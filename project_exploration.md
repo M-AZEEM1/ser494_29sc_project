@@ -114,7 +114,9 @@ for sure from this data row.
 
 
 ## 'Human Selected Dataset' Features for Computing Statistics ##
-Qualitative: 'code', 'status'
+Qualitative: 'status', 'problem_id' 
+NOTE: id can help us track different attempts at answering the same problem and compare their code for takeaways
+
 Quantitative: 'code_size', 'memory', 'cpu_time'
 
 
