@@ -10,16 +10,11 @@
 
 # Package Imports
 
-from ast import pattern
 import matplotlib.pyplot as plt
-from matplotlib.collections import LineCollection
-import numpy as np
 import pandas
-# import seaborn - advanced data vis
 import csv as c
 import statistics
-import math
-import re
+
 
 
 # Statistic generation
