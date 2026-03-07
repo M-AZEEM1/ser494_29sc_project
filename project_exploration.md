@@ -114,6 +114,7 @@ for sure from this data row.
 
 
 ## 'Human Selected Dataset' Features for Computing Statistics ##
+
 Qualitative: 'status', 'problem_id' 
 NOTE: id can help us track different attempts at answering the same problem and compare their code for takeaways
 
@@ -121,14 +122,50 @@ Quantitative: 'code_size', 'memory', 'cpu_time'
 
 
 ## Background Domain Knowledge
-TODO
+As is well-known, one of the popular uses for LLM’s and generative AI is for generating code. On the
+surface level the difference in output between LLM code and human-written code may not seem apparent, 
+since the former was trained on the latter, but there are various methods and clues that help one deduce
+whether a code sample was authored by man or machine and that is the eventual end goal of this project.
+For instance, AI-generated code tends to be more repetitive and in some areas longer, such as when it 
+comes to function name length (https://arxiv.org/abs/2508.21634). Upon closer examination, it may 
+become apparent that such code produced by LLM’s tends to be very verbose and even at times 
+unnecessarily descriptive. This phenomenon has also been found when it comes to program comments, 
+where even a simple function, for instance an ‘add(x1, x2)’ method that literally just returns x1 + x2, 
+may have documentation explicitly stating ‘This method returns the sum of two numbers’ which any 
+ordinary programmer may never explain to this degree. Beyond just names, AI generated code concerning 
+logic can be significantly longer as well due to irrelevant package imports, impractical structure 
+choices, and repetitiveness (Why AI-Generated Code Costs More to Maintain Than Human-Written Code). 
+Interestingly enough, other breadcrumbs can also give us a hint on the authorship of a code sample, 
+such as traces from StackOverflow posts merged together, cyclomatic complexity metrics, and even 
+comment-to-code ratios (Was this Python written by a human or an AI? 7 signs to spot LLM-generated 
+code - DEV Community). On top of this, performance-wise it was found that AI-generated code 
+demonstrated 1.42x more performance issues as compared to human-written code, which shows us the 
+overhead from  employing the usage of AI coding tools (AI-authored code needs more attention, 
+contains worse bugs • The Register). 
+
+source links: 
+- https://dev.to/dev_tips/was-this-python-written-by-a-human-or-an-ai-7-signs-to-spot-llm-generated-code-3370
+- https://www.altersquare.io/ai-generated-code-maintenance-costs/#:~:text=Key%20Differences%20in%20Performance%20Metrics&text=This%20comparison%20underscores%20the%20trade,demands%20of%20long%2Dterm%20growth.
+- https://arxiv.org/abs/2508.21634
+
+
+
 ## Dataset Generality
-TODO
+The samples I am using for in my chosen dataset is actually from a relevant real-world project in the
+same project domain. My data is sourced from IBM CodeNet, which is a large repository for code samples
+written by both AI and humans. The structure seems to be a bit like leetcode where problems 
+are submitted answers for, and these answers are then 'graded'. There is already literature existing
+on similar subject matter for CodeNet so I trust this is a tried-and-true source of information. Additionally,
+code is typically written to solve problems and just like how Leetcode is used by interviewers to gauge applicants,
+this level of data allows me to compare the performance of humans vs LLM's for the same coding problem
+and gauge the differences in style, performance, other metrics, etc.
+
 ## Data Transformations
 ### Transformation N
-**Description:** TODO
-**Soundness Justification:** TODO
-(duplicate above as many times as needed; remove this line when done)
+**Description:** 
+No transformation were applied. I was able to do what I have done so far by leveraging the 
+downloaded csv files from CodeNet and leverage library functions and/or strip out parts of data in-place.
+
 ## Visualizations
 ### Visual N
 **Analysis:** TODO
