@@ -1,36 +1,61 @@
 #### SER494: Project Proposal
-#### Deepfake Voice Detection
+#### Detection of LLM-Synthesized Code 
 #### Anonymous
-#### 1.28.2026
-Keywords: Scam detection, Deep learning, Deepfakes
+#### 3.23.2026
+Keywords: AI-generated code, Deep learning, Vibe Coding
 
 
 Description: 
 
-The aim of this data science project is to determine how to identify vocal deepfakes. I plan to analyze a personally created dataset of voice recordings from people I personally know, and then cross reference that data with a correlating dataset of generated deepfake audio of those same people.
-Some questions I would ask through this analysis are; What differs between the real and deepfake recordings of each individual? What patterns emerge? Are there certain trends across the majority of the datasets?
+The aim of this data science project is to determine how to identify AI Generated Code (AIGC). I plan to analyze a dataset/datasets of code samples from CodeNet of human and AIGC samples, and then cross reference the samples with each other to gain insights from a linguistic, syntactical, etc. point of view.
+Some questions I would ask through this analysis are; What generally differs between the real and AIGC code? What patterns emerge? What structural code choices are made between humans and AI? Are there certain trends across the majority of the datasets in these regards?
 
 
 Intellectual Merit: 
 
-The discovery potential of my project is to help us gather the knowledge of how to identify a deepfake audio in order to create tools that can easily identify deepfakes, hopefully to the point where said tools can even run live and check incoming data, such as an ongoing phone call. 
-This is an important field because many people, perhaps especially the older generations, are susceptible to to falling for things such as fake scam calls and fake videos online of certain known individuals due to deepfakes. 
+The discovery potential of my project is to help us gather the knowledge of how to identify the use of Generative AI in code. This research will hopefully go towards helping develop more specialized tools that can run on code samples to yield faster and more accurate results for verifying human code authenticity. 
+This is an important field because the advent of Generative AI spawned an onslaught of problems with it being harder to prevent academic integrity violations, including specifically my subject area as well, software engineering. The 'quick and dirty' approach to vibe coding homework assignments has likely taken 
+countless computer science students worldwide by storm and contributes to lack of integrity, in addition to output of university graduates with poorer quality of knowledge, skill, and competence, and essentially wounds said graduates' chances of thriving in the workforce. My research will hopefully contribute to battling
+this issue by helping prevent the cheap approach to coursework and instead encouraging deep, intuitive understanding on course competencies.
 
 
 Data Sourcing: 
 
-My basic plan as of now is to personally audio record a set sample size of participants (as of now, I am thinking 50 individuals). Each individual would say a certain sentence, e.g. "It is cloudy outside, with a high of 72, and a low of 53. Actually, that should be a high of 75 and a low of 53.". I would also record each indvidual seperately talking (not saying anything in particular, just speech works) since the AI needs an audio snippet to produce a deepfake. The AI would then use that audio snippet to deepfake a new audio recording for the individual saying the same sentence from earlier ("It is cloudy outside . . . "). I would now end up with three datasets of 50 samples each, and would look to compare the first and third for patterns that can help us identify deepfaking in audio.
+My basic plan as of now is to go through CodeNet and sift through samples across
+the two differing categories: human-generated samples, and LLM-generated samples. 
+Each sample would have certain characteristics gathered from it, such as comment-to-function
+ratio, cyclomatic complexity, etc. The choice for such features would be based on markers of
+AIGC found from the latest research. The aim is to draw generalizations based on these
+findings from the existence or lack thereof of certain markers within the samples, and
+then continue onward to later train the data based on these findings. 
 
 Background Knowledge:
 
-1) https://support.engineears.com/en/knowledge-base/glossary-of-terms
-2) https://www.advisorperspectives.com/articles/2025/11/12/how-audio-deepfakes-endanger-wealth-management-build-real-resilience
-3) https://www.pindrop.com/article/audio-deepfake-detection/
+1) Ramnarayanan, S. (n.d.). What is AI code generation? Benefits, risks, and tools. wiz.io. https://www.wiz.io/academy/ai-security/ai-code-generation 
+2) Nihill, Caroline. “What to Do about Troubles with AI-Generated Code.” IT Brew, Morning Brew, 17 Mar. 2026, www.itbrew.com/stories/2026/03/17/troubles-with-ai-generated-code. Accessed 24 Mar. 2026.
+3) “AI vs Human Code Gen Report: AI Code Creates 1.7x More Issues.” CodeRabbit, 2026, www.coderabbit.ai/blog/state-of-ai-vs-human-code-generation-report.
 
 
 
 Related Work:
 
-1) https://pmc.ncbi.nlm.nih.gov/articles/PMC11991371/
-2) https://ieeexplore.ieee.org/iel8/6287639/6514899/11141393.pdf
+1) devtips. “Was This Python Written by a Human or an AI? 7 Signs to Spot LLM-Generated Code.” DEV Community, 19 June 2025, dev.to/dev_tips/was-this-python-written-by-a-human-or-an-ai-7-signs-to-spot-llm-generated-code-3370. Accessed 24 Mar. 2026.
+2) Motiwala, Huzefa. “Why AI-Generated Code Costs More to Maintain than Human-Written Code.” AlterSquare, 5 Nov. 2025, www.altersquare.io/ai-generated-code-maintenance-costs/. Accessed 24 Mar. 2026.
+3) Cotroneo, Domenico, et al. “Human-Written vs. AI-Generated Code: A Large-Scale Study of Defects, Vulnerabilities, and Complexity.” ArXiv.org, 2025, arxiv.org/abs/2508.21634.
+4) Esteban Cuellar Argotty, Juan, and Ruben Manrique. “AI-Generated Code Detection: An Examination of Current Tools in Education.” Generative Systems and Intelligent Tutoring Systems, edited by Sabine Graf and Angelos Markos, vol. 15723, Springer Nature Switzerland, 2026, pp. 192–201, https://doi.org/10.1007/978-3-031-98281-1_15.
+5) Pan, Wei Hung, et al. “Assessing AI Detectors in Identifying AI-Generated Code: Implications for Education.” IEEE/ACM International Conference on Software Engineering: Software Engineering Education and Training (Online) [New York, NY, USA], 2024, pp. 1–11, https://doi.org/10.1145/3639474.3640068.
+6) Zhang, Zixian, and Takfarinas Saber. “Exploring the Boundaries Between LLM Code Clone Detection and Code Similarity Assessment on Human and AI-Generated Code.” Big Data and Cognitive Computing [BASEL], vol. 9, no. 2, no. 41, February 2025, https://doi.org/10.3390/bdcc9020041.
+
+
+
+Questions:
+
+1) RO1 - Describe the unique trends of differing characteristics between AIGC vs. Human-written code.
+2) RO2 - To predict the value of the likelihood of a certain code sample being AIGC based on a list of factors/markers such as comment-to-function ratio, overdocumentation, etc.
+3) RO3 - To defend the model for performing the prediction of likelihood of a code sample being AIGC
+4) RO4 - To evaluate causal relationships implied by the RO2 model
+
+
+
+Preregistration:
 

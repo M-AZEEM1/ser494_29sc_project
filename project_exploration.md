@@ -167,7 +167,13 @@ No transformation were applied. I was able to do what I have done so far by leve
 downloaded csv files from CodeNet and leverage library functions and/or strip out parts of data in-place.
 
 ## Visualizations
-### Visual N
-**Analysis:** TODO
-(duplicate above as many times as needed; remove this line when done)
+### Visual 1 - AB.png
+**Analysis:**
+This was a bit of a surprising correlation as I did not expect the shortest code samples to take the longest time on the CPU. I typically
+would have expected the opposite!
+
+### Visual 2 - AC.png
+**Analysis:**
+Again, this was also a bit of a surprising correlation as I did not expect the shortest code samples to take the most memory either.
+Perhaps this could be in part due to less efficient code but this may require deeper investigation.
 
