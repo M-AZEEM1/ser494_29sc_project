@@ -59,3 +59,33 @@ Questions:
 
 Preregistration:
 
+Potential input features:
+- A - cyclomatic complexity
+- B - comment-to-function ratio
+- C - code size
+
+Target feature: percent likelihood of the sample being AIGC
+
+To answer bullet point 3, I expect the three potential input features above may already have the most significant 
+impact on prediction (when considering existing features)
+
+
+Feature 1 Hypothesis:
+I hypothesize that a higher cyclomatic complexity score may lead to a higher chance of the model
+classifying the code being written by AI, as evidenced by research (such as here: https://vfast.org/journals/index.php/VTCS/article/view/2043/1695)
+
+Feature 2 Hypothesis:
+Likewise, I hypothesize that a high comment-to-function ratio (high determined by exceeding a set threshold
+based on research findings) will cause the model to increase its chance of assigning a higher likelihood
+percentage of being AIGC
+
+Feature 3 Hypothesis:
+Lastly, I hypothesize that larger code size may slightly boost the model's prediction percentage of
+AIGC since Generative AI tends to be more unnecessarily verbose when writing code.
+
+
+I think that there may be a positive or non-inverse correlation between AB, BC, and AC since each 
+feature serves to boost model prediction rates for AIGC due to the existence of the feature,
+I expect that BC may have the strongest correlation since C somewhat depends on B - code size
+will go up if there are more comments in the code, and both of these may indicate a stronger likelihood
+of the code being AIGC.
