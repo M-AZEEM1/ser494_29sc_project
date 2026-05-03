@@ -2,6 +2,8 @@
  This will contain code that constructs one (or more) models from your data.
 Executing it will save file(s) which stores the model(s).
 '''
+import pickle
+
 import numpy as np
 import pandas as pd
 from sklearn.metrics import accuracy_score
@@ -24,6 +26,10 @@ def regression():
     regr_model.fit(X_train, y_train)
     print("Linear regression model score: ", regr_model.score(X_test, y_test))
 
+    #save model
+    f = open('models\\regression.pickl', 'wb')
+    pickle.dump('clf', f)
+    f.close()
     return regr_model
 
 
