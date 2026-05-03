@@ -15,14 +15,14 @@ def regression():
     df = pd.read_csv("data_original\\human_selected_dataset.csv")
     df_binary = df[['code_size', 'label']]
 
-    X = np.array(df_binary['code_size']).reshape(1,-1)
-    Y = np.array(df_binary['label']).reshape(1,-1)
+    X = np.array(df_binary['code_size']).reshape(-1,1)
+    Y = np.array(df_binary['label']).reshape(-1,1)
 
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size = 0.20, train_size=0.80)
 
     regr_model = LinearRegression()
     regr_model.fit(X_train, y_train)
-    print(regr_model.score(X_test, y_test))
+    print("Linear regression model score: ", regr_model.score(X_test, y_test))
 
     return regr_model
 
@@ -59,4 +59,6 @@ if __name__ == '__main__':
     #UNCOMMENT THE MODELS NOT CURRENTLY RUNNING!
 
     #knn_sklearn(y_train, y_test, x_train, x_test)
+
+    #baseline model runs successfully!
     regression()
