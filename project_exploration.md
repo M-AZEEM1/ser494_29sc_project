@@ -36,13 +36,12 @@ download and the one in your repo must match.)
 | blank_lines          |                                    Number of blank lines.                                     |   |   |   |
 
 
-**Dataset File Hash(es):** 
+**Dataset File Hash(es):**  (Note: Updated 5/2 for workflow submission; fixed MD5)
 Dataset 1 URL - AIGC samples: https://huggingface.co/datasets/basakdemirok/AIGCodeSet/blob/main/data/created_dataset_with_llms.csv
-Dataset 1 MD5 Hash: BE858EFDB3233DFF32B4CF239171DD686F9FB968D26CB0AB44C668FA40B2226E
+Dataset 1 MD5 Hash: fa826d77880bb6cb10f4e52d1e5df9f3
 
 Dataset 2 URL - Human samples: https://huggingface.co/datasets/basakdemirok/AIGCodeSet/blob/main/data/human_selected_dataset.csv
-Dataset 2 MD5 Hash: F02F1099DE41434E67F26DD0470E8CCE32AC1A80966CEA51C8F9A25B95991DE8
-
+Dataset 2 MD5 Hash: 2e39013dc63ec7107a2bd05c2223e8e6
 
 ## Interpretable Records
 ### Record 1 - from AIGC SAMPLES DATASET 
@@ -121,7 +120,7 @@ NOTE: id can help us track different attempts at answering the same problem and 
 Quantitative: 'code_size', 'memory', 'cpu_time'
 
 
-## Background Domain Knowledge
+## Background Domain Knowledge (~310 words)
 As is well-known, one of the popular uses for LLM’s and generative AI is for generating code. On the
 surface level the difference in output between LLM code and human-written code may not seem apparent, 
 since the former was trained on the latter, but there are various methods and clues that help one deduce
@@ -163,17 +162,40 @@ and gauge the differences in style, performance, other metrics, etc.
 ## Data Transformations
 ### Transformation N
 **Description:** 
-No transformation were applied. I was able to do what I have done so far by leveraging the 
-downloaded csv files from CodeNet and leverage library functions and/or strip out parts of data in-place.
+No transformation were applied. I was able to do what I have done so far by using the 
+downloaded csv files from CodeNet and leveraging library functions and/or strip out parts of data in-place.
 
-## Visualizations
+## Visualizations (Note: updated 5/2 with missing analyses)
+
 ### Visual 1 - AB.png
 **Analysis:**
-This was a bit of a surprising correlation as I did not expect the shortest code samples to take the longest time on the CPU. I typically
-would have expected the opposite!
+This visual demonstrated a bit of a surprising correlation that I did not expect. Here it is apparent that the shortest 
+code samples have a pattern of taking the longest time on the CPU. I typically would have expected the opposite!
 
 ### Visual 2 - AC.png
 **Analysis:**
-Again, this was also a bit of a surprising correlation as I did not expect the shortest code samples to take the most memory either.
-Perhaps this could be in part due to less efficient code but this may require deeper investigation.
+This visual revealed that, interestingly enough, the shortest code samples tended to take the most memory. 
+Again, this was also a bit of a surprising correlation as I did not expect this. I am postulating that this 
+could be in part due to less efficient code, but this may require deeper investigation into the samples themselves.
 
+### Visual 3 - BC.png
+**Analysis:**
+This visual compared memory usage against CPU time, and depicted that the vast majority of
+code submissions in the dataset were low in memory usage but low-to-mid in CPU time. The scatterplot 
+showed that code samples exhibited a greater spread in terms of CPU times as opposed to memory usage which 
+stayed relatively low as aforementioned.
+
+### Visual 4 - prob_id_histogram.png
+**Analysis:**
+The histogram here illustrated that problem id's between 2600 and 3000 had the highest comparative number
+of submissions. Interestingly, the number of samples we have for problem id's above 3000 generally
+decreases with some very sharp spikes here and there. The problem id's with the most attempted
+submissions seem to between 2700-2900.
+
+### Visual 5 - status_histogram.png
+**Analysis:**
+This histogram depicted something that I don't know if I would've known about otherwise, and that is
+the fact that the dataset has equivalent submissions of each status type. I'm assuming
+this was done intentionally for variation in the dataset when CodeNet was being compiled, because
+Accepted status submissions number the same as Runtime Error submissions and also Wrong Answer submissions.
+This was personally an interesting find for me that was much easier to recognize graphically.

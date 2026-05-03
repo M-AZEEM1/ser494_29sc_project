@@ -117,7 +117,7 @@ def polynomial_regression():
 
 def stat_eval():
 
-    file = open('Models\\evaluation\\summary.txt', 'w')
+    file = open('models\\evaluation\\summary.txt', 'w')
 
     file.write("Baseline System: \n")
 
