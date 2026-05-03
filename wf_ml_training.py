@@ -7,10 +7,11 @@ import pandas as pd
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LinearRegression
 
 
 #Resource that I used as a 'tutorial': https://www.geeksforgeeks.org/machine-learning/python-linear-regression-using-sklearn/
-def Linear_Regression():
+def regression():
     df = pd.read_csv("data_original\\human_selected_dataset.csv")
     df_binary = df[['code_size', 'label']]
 
@@ -19,7 +20,7 @@ def Linear_Regression():
 
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size = 0.20, train_size=0.80)
 
-    regr_model = Linear_Regression()
+    regr_model = LinearRegression()
     regr_model.fit(X_train, y_train)
     print(regr_model.score(X_test, y_test))
 
@@ -58,4 +59,4 @@ if __name__ == '__main__':
     #UNCOMMENT THE MODELS NOT CURRENTLY RUNNING!
 
     #knn_sklearn(y_train, y_test, x_train, x_test)
-    Linear_Regression()
+    regression()
