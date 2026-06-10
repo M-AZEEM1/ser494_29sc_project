@@ -1,6 +1,6 @@
 #### SER494: Project Proposal
 #### Detection of LLM-Synthesized Code 
-#### Anonymous
+#### M-AZEEM
 #### 3.23.2026
 Keywords: AI-generated code, Deep learning, Vibe Coding
 
