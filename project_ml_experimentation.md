@@ -1,7 +1,4 @@
-This will contain documentation from evaluating your model.
-
 #### SER494: Experimentation
-#### Mohammed Azeem
 #### AIGC Code Detection Project
 #### 4.20.26
 
