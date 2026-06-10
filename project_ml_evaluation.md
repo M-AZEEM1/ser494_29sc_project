@@ -1,11 +1,6 @@
  
-This will contain documentation for experimenting with the model the
-workflow produces
-
-
 #### SER494: Machine Learning Evaluation
 #### AIGC Code Detection Project
-#### Mohammed Azeem
 #### 4.20.26
 
 ## Evaluation Metrics
