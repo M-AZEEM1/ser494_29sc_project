@@ -1,6 +1,6 @@
 #### SER494: Project Proposal
 #### Deepfake Voice Detection
-#### Anonymous
+#### M-AZEEM
 #### 1.28.2026
 Keywords: Scam detection, Deep learning, Deepfakes
 
