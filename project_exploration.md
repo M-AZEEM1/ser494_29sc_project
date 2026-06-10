@@ -1,14 +1,5 @@
-What: identify the author(s) of the dataset(s), when the data set was constructed, how many
-records it contains, the meanings of the fields/attributes, and compute an MD5 hash for each file.
-
-(If a file was downloaded, provide the URL and the MD5 of that file. The MD5 hash of the
-download and the one in your repo must match.)
-
-
-
 #### SER494: Exploratory Data Munging and Visualization
 #### Project: Detection of LLM-Synthesized Code 
-#### Author: ???
 #### Date: 3.4.2026
 
 
